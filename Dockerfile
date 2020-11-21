@@ -1,4 +1,5 @@
 FROM golang AS build-env
+ENV GOPROXY=https://goproxy.cn
 ADD . /go/src/app
 WORKDIR /go/src/app
 RUN go get -u -v github.com/gin-gonic/gin
